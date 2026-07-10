@@ -1,0 +1,71 @@
+{
+  "skill": "wechat-channels-dynamic-template",
+  "videoType": "hook-proof-switch",
+  "durationSec": 6.0,
+  "canvas": {
+    "width": 1080,
+    "height": 1920
+  },
+  "layers": {
+    "headline": {
+      "enabled": true,
+      "position": "top",
+      "motion": "flow-in",
+      "copy": "一句主判断"
+    },
+    "evidenceWindow": {
+      "enabled": true,
+      "position": "middle",
+      "switchMotion": "blur-replace",
+      "assets": [
+        "proof_01.png",
+        "proof_02.png",
+        "proof_03.png"
+      ]
+    },
+    "footer": {
+      "enabled": true,
+      "position": "bottom",
+      "motion": "static",
+      "copy": "一句价值解释"
+    }
+  },
+  "beats": [
+    {
+      "start": 0.0,
+      "end": 0.8,
+      "goal": "headline_reveal",
+      "asset": "headline-base"
+    },
+    {
+      "start": 0.8,
+      "end": 2.2,
+      "goal": "proof_01",
+      "asset": "proof_01.png"
+    },
+    {
+      "start": 2.2,
+      "end": 3.8,
+      "goal": "proof_02",
+      "asset": "proof_02.png"
+    },
+    {
+      "start": 3.8,
+      "end": 5.4,
+      "goal": "proof_03",
+      "asset": "proof_03.png"
+    },
+    {
+      "start": 5.4,
+      "end": 6.0,
+      "goal": "hold",
+      "asset": "proof_03.png"
+    }
+  ],
+  "checks": [
+    "headline readable within first second",
+    "evidence window advances at least twice",
+    "footer does not overpower evidence",
+    "do not use full-page slideshow"
+  ]
+}
